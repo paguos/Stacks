@@ -46,7 +46,7 @@
                             <a class="btn btn-primary btn-lg" href="#" role="button" onclick="reset()">Reset</a>
                             <a class="btn btn-primary btn-lg" href="#" role="button" onclick="answerWrong()">Wrong</a>
                             <a class="btn btn-primary btn-lg" href="#" role="button" onclick="answerRight()">Right</a>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newArticleModal">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#showContentModal">
                                     Show Questions
                             </button>
                         </div>
@@ -74,17 +74,16 @@
         </div>
 
         <!-- Modal zur Erstellung eines neuen Blogartikels -->
-    <div class="modal fade" id="newArticleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="showContentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
-        <form class="modal-content" id="addNewArticleForm">
-          <div class="modal-header">
+        
+        <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Stack Content</h4>
+            <h4 class="modal-title" id="showContentModalLabel">Stack Content</h4>
           </div>
           <div class="modal-body">
-                
+                <ul id="modal-questions-list"></ul>
           </div>
-        </form>
       </div>
     </div>
 
