@@ -52,7 +52,7 @@ function selectByHash(){
 	var index = 0;
 
 	for (var i = 0; i < names.length; i++) {
-		console.log(names[i].toLowerCase());
+		//console.log(names[i].toLowerCase());
 		if(hash === "#" + names[i].toLowerCase()){
 			index = i;
 		}
