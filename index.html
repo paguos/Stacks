@@ -9,9 +9,6 @@
     <link rel="stylesheet" media="screen" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <style type="text/css">
-
-    </style>
 </head>
 
 <body>
@@ -49,8 +46,8 @@
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="reset()">Reset</a>
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="answerWrong()">Wrong</a>
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="answerRight()">Right</a>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#showContentModal">
-                                    Show Questions
+                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#showCardsModal">
+                                    Show Cards
                             </button>
                     </div>
                 </div>
@@ -77,15 +74,15 @@
     </div>
 
     <!-- Modal zur Erstellung eines neuen Blogartikels -->
-    <div class="modal fade" id="showContentModal" tabindex="-1" role="dialog" aria-labelledby="showContentModalLabel">
+    <div class="modal fade" id="showCardsModal" tabindex="-1" role="dialog" aria-labelledby="showCardsModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content" id="addNewArticleForm">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="showContentModalLabel">Stack Content</h4>
+                    <h4 class="modal-title" id="showCardsModalLabel">Stack's Cards</h4>
                 </div>
                 <div class="modal-body">
-                    <ul id="modal-questions-list">
+                    <ul id="modal-cards-list">
                     </ul>
                 </div>
             </div>

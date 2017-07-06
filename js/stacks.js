@@ -90,7 +90,7 @@ function selectStack(index) {
 	displayRem();
 	makeActivePage(index);
 	reset();
-	loadModalQuestions();
+	loadModalCards();
 }
 
 function makeActivePage(index) {
@@ -254,8 +254,8 @@ field.addEventListener("keydown", function (event) {
 });
 
 //Refresh List of Questions:
-function loadModalQuestions(){
-	var modalList = document.getElementById("modal-questions-list");
+function loadModalCards(){
+	var modalList = document.getElementById("modal-cards-list");
 	removeChildNodes(modalList);
 	for (var i = 0; i < cards.length; i++) {
 		var li = document.createElement("li");
