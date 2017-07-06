@@ -245,7 +245,7 @@ field.addEventListener("keydown", function(event) {
     	answerRight();
     }else if(event.keyCode == "X".charCodeAt(0)){
     	answerWrong();
-    } else {
+    }else if(event.keyCode == "Z".charCodeAt(0)){
     	reset();
     }
 });
