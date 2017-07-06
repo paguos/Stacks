@@ -1,0 +1,51 @@
+/*Einspaltiges Layout*/
+html{
+    font-size: 16px;
+    min-width: 175px;
+}
+body{
+    background-color: rgba(250,240,230,0.5);
+}
+article{
+    background-color: white;
+}
+
+main{
+    width: 80%;
+    max-width: 800px;
+    min-height: 70vh;
+    margin: 0.5em auto;
+}
+header, footer, article, #navMain{
+    border: 1px solid darkgrey;
+    padding: 0.5em;
+}
+
+
+/*Listen anpassen*/
+nav ul{
+    margin: 0px;
+    padding: 0px;
+    float: right;
+} 
+nav ul li{
+    display: block;
+    float: left;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    padding: 0 0.5ex;
+}
+nav::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*Footer Hintergrundbild*/
+footer nav{
+    padding: 0.5em;
+    background-image: url(https://www.snet.tu-berlin.de/fileadmin/_processed_/e/ec/csm_sn_mz_rgb_mittel_b0c0d3b1d0.jpg); 
+    background-repeat: no-repeat;
+    background-position: left center ;
+    background-size: 8em;
+}

@@ -1,0 +1,235 @@
+//SWTPP Content:
+
+var stackSWTPP1 = ["Was versteht man unter Softwaretechnik?",
+"Was sind die grundlegenden Aktivitäten der Softwaretechnik?",
+"Wie sind die grundlegenden Aktivitäten im Wasserfallmodell angeordnet?",
+"Welche Vorteile hat das Wasserfallmodell/welche Nachteile?",
+"Wie unterscheiden sich Wasserfallmodell und V-Modell?",
+"Welche Tests sind im V-Modell eingeplant?",
+"Wie lassen sich die Entwicklungskosten neuer Software erheblich reduzieren?",
+"Welche Aktivitäten kommen hinzu, wenn bestehende Komponenten wiederverwendet werden sollen?",
+"Was versteht man unter inkrementeller Entwicklung?",
+"Was sind Vorteile, was Nachteile der inkrementellen Entwicklung?",
+"Welche Phase kommt bei dem Spiralmodell nach Boehm hinzu?",
+"Wann gilt ein Projekt nach dem Spiralmodell von Boehm als gescheitert?",
+"Was versteht man unter agilen Entwicklungsprozessen?",
+"Was ist der Unterschied zwischen plangesteuerten und agilen Entwicklungsprozessen?",
+"In welche 3 Phasen lässt sich der Scrum-Prozess gliedern?",
+"Wie läuft ein Sprint-Zyklus im Scrum-Prozess ab?",
+"Was ist der Unterschied zwischen dem Product Backlog und dem Sprint Backlog?",
+"Welche Rollen sind im Scrum Prozess vorgesehen?",
+"Welche Besonderheiten charakterisieren das Extreme Programming?",
+"Welche Best Practices finden beim Extreme Programming Anwendung?",
+"Wie wird im Extreme Programming mit Feedback umgegangen?",
+"Wann bietet sich planbasiertes Vorgehen an? Wann agiles?"];
+
+var stackSWTPP2 = ["Welche Information enthält das Pflichtenheft/welche das Lastenheft?",
+"Wie lassen sich Anforderungen textuell notieren?",
+"Wie lassen sich natürlichsprachliche Anforderungen strukturieren?",
+"Was sind sinnvolle Felder für strukturierte Anforderungen?",
+"Was ist UML?",
+"Welche Diagramme eignen sich zur Modellierung von Anforderungen?",
+"Woraus bestehen Anwendungsfalldiagramme?",
+"Wie detailliert sollten Anwendungsfalldiagramme sein?",
+"Wie werden Beziehungen zwischen Use-Cases ,im Anwendungsfalldiagramm modelliert?",
+"Wie lassen sich mehrere Use-Cases/Akteure zusammenfassen?",
+"Wann verwendet man include, wann extend?",
+"Wie unterscheiden sich Sequenzdiagramm und Anwendungsfalldiagramm?",
+"Welche Arten von Kommunikation gibt es im Sequenzdiagramm?",
+"Wodurch unterscheiden sie sich? (Arten von Kommunikation)",
+"Wie lässt sich Fehlerbehandlung in Sequenzdiagrammen darstellen?",
+"Was ist der Unterschied zwischen funktionalen und nicht-funktionalen Anforderungen?",
+"Welche Arten von nicht-funktionalen Anforderungen gibt es?",
+"Können nicht-funktionale Anforderungen genauso wie funktionale validiert werden?"];
+
+var stackSWTPP3 = ["Was ist das Ziel der Strukturmodellierung?", 
+"Welche Diagramme bietet UML dafür an?",
+"Was stellt das Klassendiagramm dar?",
+"Wofür kann es eingesetzt werden? (Klassendiagramm)",
+"Wie werden Klassen im Klassendiagramm dargestellt?",
+"Wie werden die Beziehungen zwischen Klassen modelliert?",
+"Was ist der Unterschied zwischen einem Attribut und einer Assoziation?",
+"Wann verwendet man ein Attribut, wann eine Assoziation?",
+"Wie lassen sich gleichartige Assoziationen eindeutig unterscheiden?",
+"Womit kann angegeben werden in welche Richtung eine Assoziation gilt?",
+"Wie werden Datensätze als Assoziation modelliert?",
+"Wann verzichtet man auf eine genaue Spezifizierung einer Assoziation?",
+"Was versteht man unter einer Aggregation/Komposition im Klassendiagramm?",
+"Wie modelliert man Generalisierung/Spezialisierung im Klassendiagramm?",
+"Was lässt sich mit Stereotypen modellieren?",
+"Welche Stereotype gibt es im ECB-Konzept? Was bedeuten sie?",
+"Wie unterscheiden sich Klassen- und Objektdiagramm?",
+"Was stellt das Objektdiagramm dar?",
+"Kann das Objektdiagramm zum Systementwurf verwendet werden?",
+"Wie werden Objekte im Objektdiagramm dargestellt?"];
+
+var stackSWTPP4 = ["Was ist das Ziel der Verhaltensmodellierung?",
+"Welche Diagramme bietet UML dafür an? (Verhaltensmodellierung)",
+"Was stellen Interaktionsdiagramme dar und warum gibt es mehrere?",
+"Wofür kann es eingesetzt werden? (Interaktionsdiagramme)",
+"Worin unterscheiden sich interne von externen Sequenzdiagrammen?",
+"Welche Lebenslinien gibt es in Sequenzdiagrammen?",
+"Wie stellt man eine Kommunikation zwischen Objekten dar?",
+"Welche Elemente der Klassendiagramme finden sich in den Sequenzdiagrammen wieder?",
+"Was zeichnet die Lebenslinien von Objekten aus, die mit create oder delete erzeugt oder gelöscht wurden?",
+"Woher kommen Bezeichner in Sequenzdiagrammen bzw. welche Elemente müssen dem Klassenmodell entsprechen?",
+"Was stellen Aktivitätsdiagramme dar?",
+"Wofür können Aktivitätsdiagramme eingesetzt werden?",
+"Was sind Aktionen?",
+"Welche Kontrollknoten gibt es und was bedeuten sie?",
+"Was ist der Unterschied zwischen Aktivitäts- und Kontrollflussendknoten?",
+"Warum müssen die Guards von Verzweigungen disjunkt und vollständig sein?",
+"In welcher Reihenfolge werden Pfade ausgeführt, die durch Splitting aufgeteilt wurden?",
+"Welche Ereignisse gibt es und was kann man damit ausdrücken?",
+"Was ist das Ziel von modellgetriebener Entwicklung (MDD)?"];
+
+var stackSWTPP5 = ["Was versteht man unter dem AnyType in OCL? Was wird dadurch möglich?",
+"Wie werden undefinierte Werte in OCL dargestellt?",
+"Welche Logik ergibt sich daraus? (undefinierte Werte in OCL)",
+"Wie kann auf alle Instanzen einer Klasse zugegriffen werden?",
+"Was ist eine Invariante und wie wird sie verwendet?",
+"Wie lässt sich das Systemverhalten genauer spezifizieren?",
+"Woraus besteht der Contract einer Funktion?",
+"Wie hängt er mit den strukturierten Requirements zusammen?",
+"Wie kann in der Nachbedingung Veränderung spezifiziert werden?",
+"Wie werden neu erzeugte Objekte überprüft? Wie Ergebnisse?",
+"Wie funktioniert der Contract zu kundeHinzufügen (Folie 65)? Wie kommt man darauf?",
+"Was ist die Object Constraint Language? Warum braucht man sie?",
+"Wie kann mit OCL auf Werte von Objekten zugegriffen werden?",
+"Welche primitiven Typen kennt OCL? Wie kann man mit ihnen arbeiten?",
+"Wie kann in OCL auf Werte verbundener Objekte zugegriffen werden?",
+"Wie funktioniert der Zugriff auf mehrere verbundene Objekte?",
+"Wie unterscheiden sich die verschiedenen Collections in OCL?",
+"Welche Operationen stehen für Set/Bag zur Verfügung?Welche für Sequence/OrderedSet? ",
+"Was ist bei einem Wechsel der Collection zu beachten?",
+"Wie können spezifische Werte aus einer Collection gefiltert werden?",
+"Wie können Operationen auf die Elemente einer Collection angewandt werden?",
+"Was geschieht dabei jeweils mit dem Typ der Collection?",
+"Wie können die Werte in einer Collection zusammengefasst werden?",
+"Wie können Bedingungen für alle Elemente einer Collection angegeben werden?",
+"Wie lässt sich damit die Teilmengenrelation überprüfen?",
+"Was versteht man unter Tupeln in OCL?"];
+
+var stackSWTPP6 = ["Wofür gibt es Architekturmuster?",
+"Wie unterscheiden sich die vorgestellten Architekturmuster?",
+"Welche Vor- und Nachteile haben sie jeweils? (Architekturmuster)",
+"Für was für Systeme eignen sie sich? (Architekturmuster)",
+"Was ist ein Design Pattern?",
+"Wofür wurden die vorgeschlagen? (Design Patterns)",
+"Wie kann man sicherstellen, dass es von einer Klasse nur eine Instanz gibt?",
+"Wie unterscheiden sich das Builder Pattern von den vorgestellten Alternativen?",
+"Wie funktioniert das Composite-Pattern?",
+"Für welche Zwecke kann man das Proxy-Pattern gebrauchen?",
+"Wie ist der Zusammenhang zwischen Observer-Pattern und MVC?",
+"Wie kann mit dem Command-Pattern der Aufruf von der Ausführung einer Funktion entkoppelt werden?"];
+
+var stackSWTPP7 = ["Wie lässt sich die Korrektheit einer Implementierung nachweisen?",
+"Was versteht man unter einem Hoare-Tripel?",
+"Welche Axiome gibt es im Hoare-Kalkül für die WHILE-Sprache?",
+"Wie lassen sich komplexere Terme zerlegen?",
+"Welche Inferenzregeln gibt es für die WHILE-Sprache?",
+"Was versteht man unter einer Schleifeninvariante und wofür wirdsie benötigt?",
+"Was versteht man unter der Rule of Consequence?",
+"Was ist der unterschied zwischen partieller und totaler Korrektheit?",
+"Wie lässt sich totale Korrektheit nachweisen?",
+"Was versteht man unter einer Terminierungsfunktion?",
+"Was muss für sie gelten um totale Korrektheit nachzuweisen?"];
+
+var stackSWTPP8 = ["Welche Anforderungen werden an Metriken generell gestellt?",
+"Welche Arten von Metriken gibt es? Wie unterscheiden sie sich?",
+"Wofür eignen sich Zeilenmetriken? Was sind ihre Schwächen?",
+"Was messen die Metriken nach Halstead? Wie funktionieren sie?",
+"Wie lässt sich die Struktur eines Programmes beschreiben?",
+"Was versteht man unter einem Basisblock?",
+"Worauf muss man bei der Struktur von JAVA Code achten?",
+"Was erfasst die zyklomatische Komplexität nach McCabe?",
+"Wie funktioniert die zyklomatische Komplexität?",
+"Welche Metriken messen Eigenschaften Objektorientierter Software?",
+"Sind Metriken das Maß aller Dinge?",
+"Wie kann ich schlecht bewerteten Code verbessern?",
+"Was versteht man unter Code-Smells?",
+"Wie lassen sich große Klassen, lange Methoden, etc. verbessern?"];
+
+var stackSWTPP9 = ["Welche Maßnahmen zur Qualitätssicherung gibt es?",
+"Warum müssen wir testen?",
+"Warum kann man nicht immer alles testen?",
+"In welchen Phasen der Entwicklung wird getestet?",
+"Welche Methoden gibt es grundsätzlich, Testfälle systematisch auszuwählen?",
+"Welche Überdeckungsmaße haben wir für strukturorientierte Tests kennengelernt?",
+"Erreicht man mit 100% Zweigüberdeckung auch 100% Anweisungsüberdeckung?",
+"Welche sprachlichen Elemente verhindern, mit 100% Pfadüberdeckung zu testen?",
+"Erreicht man mit 100% einfacher Bedingungsüberdeckung auch 100% Zweigüberdeckung?", 
+"Warum ist Mehrfach-Bedingungsüberdeckung schwer zu erreichen?",
+"Kann man mit strukturorientierten Test erkennen, wenn eine Funktionalität vergessen wurde?",
+"Warum heißen die Funktionsorientierten Tests auch Black-Box-Tests?",
+"Welche Informationen werden zur Definition der Testfälle im funktionsorientierten Tests hergenommen?",
+"Wodurch erweitert die Grenzwertanalyse die Äquivalenzklassentests?",
+"Was stellen die Zeilen in der Entscheidungstabelle dar?",
+"Was stellen die Spalten in der Entscheidungstabelle dar?",
+"Wozu dient Testautomatisierung?",
+"Wie werden Testfälle in jUnit definiert?",
+"Wodurch zeichnet sich testgetriebene Entwicklung aus?"];
+
+var stackSWTPP10 = ["Was ist der Unterschied zwischen Syntax und Semantik?",
+"Was versteht man unter einem Programmierparadigma?",
+"Was ist der Unterschied zwischen imperativ und funktional?",
+"Welche Programmierparadigmen unterstützt Haskell?",
+"Welche Rolle spielen Funktionen in Haskell?",
+"Was verwendet man statt Schleifen in funktionalen Sprachen?",
+"Was ist Pattern Matching?",
+"Welche Grundlegenden Datentypen gibt es in Haskell?",
+"Was versteht man unter Konstruktion/Dekonstruktion?",
+"Wie funktioniert die Selektion von Daten in Haskell?",
+"Was ist ein rekursiver Datentyp?",
+"Wofür benötigt man parametrisierte Datentypen?",
+"Welche wichtigen Funktionen benötigt man zum Arbeiten auf Listen?",
+"Welche Vorteile bietet Lazy-Evaluation?",
+"Was ist der Unterschied zwischen einem Typ und einer Typklasse?",
+"Wie werden Typklassen instanziiert?",
+"Wie kann man mit Typklassen Signaturen einschränken?",
+"Was ist Currying? Welche Form verwendet Haskell, welche C?",
+"Wie funktioniert Partial Application? Wann verwendet man es?",
+"Was versteht man unter Funktionen höherer Ordnung?",
+"Was sind Listenfunktionale und wofür benötigt man sie?",
+"Welches Listenfunktional kann die anderen beiden ersetzen?",
+"Wodurch kann man auf begrenztem Speicher unendliche Listen anlegen?",
+"Wie arbeitet man mit unendlichen Listen?"];
+
+var stackSWTPP11 = ["Was ist logische Programmierung?",
+"Was ist die Closed-World Assumption?",
+"Wie setzen sich Terme in Prolog zusammen?",
+"Was sind Variablen in Prolog und welchen Typ haben sie?",
+"Welche Typen gibt es in Prolog?",
+"Was unterscheidet einen Funktor von einer Funktion in anderen Programmiersprachen?",
+"Was ist der Unterschied zwischen einer Anfrage und einer Regel?",
+"Warum gibt es so viele Vergleichsoperatoren?",
+"Wann werden arithmetische Ausdrücke ausgewertet?",
+"Wie erhalte ich das erste Element einer Liste?",
+"Was passiert, wenn man an eine Liste mit Zahlen einen String anhängt?",
+"Wie funktioniert Unifikation und wann sind zwei Terme unifizierbar?",
+"Wie löst der Prolog-Interpreter die ihm gestellten Anfragen?",
+"Wieso sollten rekursive Ausdrücke immer rechts innerhalb einer Klausel und unten bei mehreren Klauseln stehen?",
+"Wie vermeidet man eine unendliche Auswertung zyklischer Daten?"];
+
+var stacksSWTPP = [];
+stacksSWTPP.push({"title": "Einführung & Entwicklungsmodell", "cards" : stackSWTPP1});
+stacksSWTPP.push({"title": "Requirements Engeniering", "cards" : stackSWTPP2});
+stacksSWTPP.push({"title": "Analyse und Entwurf - Struktur", "cards" : stackSWTPP3});
+stacksSWTPP.push({"title": "Analyse und Entwurf - Verhalten", "cards" : stackSWTPP4});
+stacksSWTPP.push({"title": "Formale Spezifikation - OCL", "cards" : stackSWTPP5});
+stacksSWTPP.push({"title": "Implementierung", "cards" : stackSWTPP6});
+stacksSWTPP.push({"title": "Korrektheit", "cards" : stackSWTPP7});
+stacksSWTPP.push({"title": "Codequalität", "cards" : stackSWTPP8});
+stacksSWTPP.push({"title": "Testen", "cards" : stackSWTPP9});
+stacksSWTPP.push({"title": "Funktionale Programmierung", "cards" : stackSWTPP10});
+stacksSWTPP.push({"title": "Logische Programmierung", "cards" : stackSWTPP11});
+
+addCourse("Softwaretechnik & Programmierparadigmen","SWTPP",stacksSWTPP);
+
+//SWT+ Content:
+
+var architectures = ['Architekturmustern','Model-View-Controller','Layer-based','Repository-based','Pipes and Filter', 'Event-based', 'Client Server','P2P','SOA'];
+var desing_patterns = ['Design Patterns', 'Singleton','Builder','Composite','Proxy','Observer', 'Command'];
+var swtStacks = [{"title" : "Architekturstile", "cards" : architectures},{"title" : "Design Patterns", "cards" : desing_patterns}];
+
+addCourse("Softwaretechnik+","SWT+",swtStacks);
