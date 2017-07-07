@@ -88,24 +88,8 @@ function selectStack(index) {
 	displayStack();
 	displayCard();
 	displayRem();
-	makeActivePage(index);
 	reset();
 	loadModalCards();
-}
-
-function makeActivePage(index) {
-	var ul = document.querySelector("#pages");
-	var pages = ul.childNodes;
-	index++;
-
-	pages.forEach(function (page, i) {
-		if (index == i) {
-			page.className = "active";
-		} else {
-			page.className = "";
-		}
-	});
-
 }
 
 function displayStack() {
@@ -186,43 +170,16 @@ function copyArray(arry) {
 }
 
 function initPagination() {
-	var ul = document.querySelector("#pages");
-
-	removeChildNodes(ul);
-
-	// Prev Page
-	var prev = createPageNav("&laquo;");
-	prev.addEventListener("click", function () {
-		if (stackIndex !== 0) {
-			selectStack(stackIndex - 1);
-		}
-	});
-	ul.appendChild(prev);
-
-
-	var pages = [];
 
 	// #Pages
 	var numberOfStacks = course.stacks.length;
-	for (var i = 0; i < numberOfStacks; i++) {
-		var li = createPageNav(i + 1 + "");
-		if (pages.length < 15)
-			pages.push(li);
-	}
 
-	pages.forEach(function (page, i) {
-		page.addEventListener("click", function () { selectStack(i) });
-		ul.appendChild(page);
+	$('#show_paginator').bootpag({
+		total: numberOfStacks,
+		maxVisible: 8
+	}).on('page', function (event, num) {
+		selectStack(num - 1);
 	});
-
-	// Next Page
-	var next = createPageNav("&raquo;");
-	next.addEventListener("click", function () {
-		if (stackIndex !== getCoursesNames.length + 1) {
-			selectStack(stackIndex + 1);
-		}
-	});
-	ul.appendChild(next);
 }
 
 function removeChildNodes(myNode) {
@@ -254,7 +211,7 @@ field.addEventListener("keydown", function (event) {
 });
 
 //Refresh List of Questions:
-function loadModalCards(){
+function loadModalCards() {
 	var modalList = document.getElementById("modal-cards-list");
 	removeChildNodes(modalList);
 	for (var i = 0; i < cards.length; i++) {
@@ -263,5 +220,7 @@ function loadModalCards(){
 		modalList.appendChild(li);
 	}
 }
+
+
 
 init();
