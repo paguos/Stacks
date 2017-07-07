@@ -47,7 +47,7 @@
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="reset()">Reset</a>
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="answerWrong()">Wrong</a>
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="answerRight()">Right</a>
-                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#showCardsModal">
+                        <button id="show-btn" type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#showCardsModal">
                                     Show Cards
                             </button>
                     </div>
@@ -61,10 +61,18 @@
                     </div>
                 </div>
             </div>
-            <div id="show_paginator"></div>
+
+
         </div>
 
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="width: 50%; margin: 0 auto;" id="show_paginator"></div>
+        </div>
+
+    </footer>
 
     <!-- Modal zur Erstellung eines neuen Blogartikels -->
     <div class="modal fade" id="showCardsModal" tabindex="-1" role="dialog" aria-labelledby="showCardsModalLabel">
