@@ -43,7 +43,8 @@ function selectCourse(index) {
 	initPagination();
 	selectStack(0);
 	displayActiveCourse(index);
-
+	setCookie("index142","311da"+ index, 10);
+	console.log(getCookie("index142"));
 }
 
 function selectByHash() {
@@ -51,8 +52,8 @@ function selectByHash() {
 	var names = getCoursesNames();
 	var index = 0;
 
+
 	for (var i = 0; i < names.length; i++) {
-		//console.log(names[i].toLowerCase());
 		if (hash === "#" + names[i].toLowerCase()) {
 			index = i;
 		}
@@ -263,5 +264,29 @@ function loadModalCards(){
 		modalList.appendChild(li);
 	}
 }
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	console.log("Added Cokie!" + document.cookie);
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}		
 
 init();
