@@ -1,9 +1,9 @@
-var cards = [];
-var stacks = [];
-var course = {};
+var currentCardsSet = [];
+var currentStack = [];
+var currentCourse = {};
 
 var currentCourseIndex = 0;
-var stackIndex = 0;
+var currentStackIndex = 0;
 var currentCardIndex = -1; 
 
 function getCourse(index) {
@@ -11,11 +11,11 @@ function getCourse(index) {
 }
 
 function getStack(index) {
-	return course.stacks[index];
+	return currentCourse.stacks[index];
 }
 
 function getCards() {
-	return copyArray(stacks.cards);
+	return copyArray(currentStack.cards);
 }
 
 function init() {
@@ -71,7 +71,7 @@ function addKeyListeners() {
 function initPagination(page_nr = 1) {
 
 	// #Pages
-	var numberOfStacks = course.stacks.length;
+	var numberOfStacks = currentCourse.stacks.length;
 
 	$('#show_paginator').bootpag({
 		total: numberOfStacks,
@@ -101,7 +101,8 @@ function selectByHash(course_index = 0, stack_index = 0) {
 
 // Selects a course and displays it
 function selectCourse(index) {
-	course = getCourse(index);
+	currentCourse = getCourse(index);
+	currentCourseIndex = index;
 	displayCourse();
 	displayActiveCourse(index);
 	selectStack(0);
@@ -110,9 +111,9 @@ function selectCourse(index) {
 
 // Selects a stack and displays it
 function selectStack(index) {
-	stacks = getStack(index);
-	cards = getCards();
-	stackIndex = index;
+	currentStack = getStack(index);
+	currentCardsSet = getCards();
+	currentStackIndex = index;
 	currentCardIndex = chooseCardIndex(-1);
 	displayStack();
 	displayCard();
@@ -127,9 +128,9 @@ function selectStack(index) {
 function loadModalCards() {
 	var modalList = document.getElementById("modal-cards-list");
 	removeChildNodes(modalList);
-	for (var i = 0; i < cards.length; i++) {
+	for (var i = 0; i < currentCardsSet.length; i++) {
 		var li = document.createElement("li");
-		li.textContent = cards[i];
+		li.textContent = currentCardsSet[i];
 		modalList.appendChild(li);
 	}
 }
@@ -151,25 +152,25 @@ function displayActiveCourse(index) {
 // Displays current course content
 function displayCourse() {
 	var h1 = document.querySelector("#coursetitle");
-	h1.textContent = course.name;
+	h1.textContent = currentCourse.name;
 }
 
 // Displays current stack content
 function displayStack() {
 	var h2 = document.querySelector("#stacktitle");
-	h2.textContent = stackIndex + 1 + ". " + stacks.title;
+	h2.textContent = currentStackIndex + 1 + ". " + currentStack.title;
 }
 
 // Displays current card content
 function displayCard() {
 	var h2 = document.querySelector("#card");
-	h2.textContent = cards[currentCardIndex];
+	h2.textContent = currentCardsSet[currentCardIndex];
 }
 
 // Updates remaning cards
 function displayRem() {
 	var p = document.querySelector("p");
-	p.textContent = "Remaining: " + cards.length;
+	p.textContent = "Remaining: " + currentCardsSet.length;
 }
 
 // Returns a list of all the curses names of the JSON file
@@ -195,7 +196,7 @@ function log(input) {
 
 // Reset the current stack
 function reset() {
-	cards = getCards();
+	currentCardsSet = getCards();
 	currentCardIndex = chooseCardIndex(-1);
 	displayCard();
 	displayRem();
@@ -204,8 +205,8 @@ function reset() {
 }
 
 function answerWrong() {
-	if (cards.length > 0) {
-		log("WRONG: " + cards[currentCardIndex]);
+	if (currentCardsSet.length > 0) {
+		log("WRONG: " + currentCardsSet[currentCardIndex]);
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();
 		displayRem();
@@ -213,9 +214,9 @@ function answerWrong() {
 }
 
 function answerRight() {
-	if (cards.length > 0) {
-		log("RIGHT: " + cards[currentCardIndex]);
-		cards.splice(currentCardIndex, 1);
+	if (currentCardsSet.length > 0) {
+		log("RIGHT: " + currentCardsSet[currentCardIndex]);
+		currentCardsSet.splice(currentCardIndex, 1);
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();
 		displayRem();
@@ -224,9 +225,9 @@ function answerRight() {
 
 // Returns a random index for the next card
 function chooseCardIndex(oldIndex) {
-	var index = Math.floor(Math.random() * cards.length);
-	while (oldIndex === index && cards.length > 1) {
-		index = Math.floor(Math.random() * cards.length);
+	var index = Math.floor(Math.random() * currentCardsSet.length);
+	while (oldIndex === index && currentCardsSet.length > 1) {
+		index = Math.floor(Math.random() * currentCardsSet.length);
 	}
 	return index;
 }
