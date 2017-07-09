@@ -19,7 +19,21 @@ function getCards() {
 
 function init() {
 	initNav();
-	selectByHash();
+
+	//Load Cookies:
+	var course_index = 0;
+	var course_cookie = getCookie("stacks_course"); 
+	if(course_cookie !== ""){
+		index = parseInt(course_cookie);
+	}  
+	var stack_index = 0;
+	var stack_cookie = getCookie("stacks_stack");
+	if(stack_cookie !== ""){
+		stack_index = parseInt(stack_cookie);
+		
+	}
+
+	selectByHash(course_index, stack_index);
 }
 
 function initNav() {
@@ -37,29 +51,10 @@ function initNav() {
 	});
 }
 
-function selectCourse(index) {
-	course = getCourse(index);
-	displayCourse();
-	initPagination();
-	var stackI = 0;
-	var cookie_content = getCookie("stacks_stack");
-	if(cookie_content !== ""){
-		stackI = parseInt(cookie_content);
-	}
-	selectStack(stackI);
-	displayActiveCourse(index);
-	setCookie("stacks_course",""+ index, 10);
-}
-
-function selectByHash() {
+function selectByHash(course_index=0,stack_index =0) {
 	var hash = location.hash.toLowerCase();
 	var names = getCoursesNames();
-	var index = 0;
-
-	var cookie_content = getCookie("stacks_course"); 
-	if(cookie_content !== ""){
-		index = parseInt(cookie_content);
-	}
+	var index = course_index;
 
 	for (var i = 0; i < names.length; i++) {
 		if (hash === "#" + names[i].toLowerCase()) {
@@ -68,6 +63,30 @@ function selectByHash() {
 	}
 
 	selectCourse(index);
+	selectStack(stack_index);
+}
+
+function selectCourse(index) {
+	course = getCourse(index);
+	displayCourse();
+	initPagination();
+	displayActiveCourse(index);
+	selectStack(0);
+	setCookie("stacks_course",""+ index, 10);
+}
+
+function selectStack(index) {
+	stacks = getStack(index);
+	cards = getCards();
+	stackIndex = index;
+	currentCardIndex = chooseCardIndex(-1);
+	displayStack();
+	displayCard();
+	displayRem();
+	reset();
+	loadModalCards();
+	initPagination(index+1);
+	setCookie("stacks_stack",""+ index, 10);
 }
 
 function displayActiveCourse(index) {
@@ -86,20 +105,6 @@ function displayActiveCourse(index) {
 function displayCourse() {
 	var h1 = document.querySelector("#coursetitle");
 	h1.textContent = course.name;
-}
-
-function selectStack(index) {
-	stacks = getStack(index);
-	cards = getCards();
-	stackIndex = index;
-	currentCardIndex = chooseCardIndex(-1);
-	displayStack();
-	displayCard();
-	displayRem();
-	reset();
-	loadModalCards();
-	initPagination(index+1);
-	setCookie("stacks_stack",""+ index, 10);
 }
 
 function displayStack() {
@@ -238,7 +243,6 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-	console.log("Added Cokie!" + document.cookie);
 }
 
 function getCookie(cname) {
