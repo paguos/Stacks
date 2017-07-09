@@ -19,7 +19,6 @@ var ecomChap1 = ["Dimensions of Digital Value Chains",
 
 var ecomChap2 = ["Business Model vs Plan vs Case",
 "Business Model Examples",
-"Value Proposition and Revenue Model Examples",
 "Business Model Canvas (Overview)",
 "Customer Segments",
 "Value Proposition",
