@@ -39,6 +39,7 @@ function initNav() {
 
 function selectCourse(index) {
 	course = getCourse(index);
+	stacks = course.stacks;
 	displayCourse();
 	initPagination();
 	var stackI = 0;
