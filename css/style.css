@@ -26,8 +26,6 @@ html, body {
     padding-right: 20px;
 }
 
-@media (max-width: 991px) {
-    #show-btn {
-        margin-top: 8px;
-    }
+#buttonsPanel > * {
+    margin-top: 8px;
 }
