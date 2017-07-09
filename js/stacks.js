@@ -15,7 +15,7 @@ function getStack(index) {
 }
 
 function getCards() {
-	return copyArray(currentStack.cards);
+	return tools.copyArray(currentStack.cards);
 }
 
 function init() {
@@ -24,12 +24,12 @@ function init() {
 
 	//Load Cookies:
 	var course_index = 0;
-	var course_cookie = getCookie("stacks_course");
+	var course_cookie = tools.getCookie("stacks_course");
 	if (course_cookie !== "") {
 		index = parseInt(course_cookie);
 	}
 	var stack_index = 0;
-	var stack_cookie = getCookie("stacks_stack");
+	var stack_cookie = tools.getCookie("stacks_stack");
 	if (stack_cookie !== "") {
 		stack_index = parseInt(stack_cookie);
 
@@ -106,7 +106,7 @@ function selectCourse(index) {
 	displayCourse();
 	displayActiveCourse(index);
 	selectStack(0);
-	setCookie("stacks_course", "" + index, 10);
+	tools.setCookie("stacks_course", "" + index, 10);
 }
 
 // Selects a stack and displays it
@@ -121,13 +121,13 @@ function selectStack(index) {
 	reset();
 	loadModalCards();
 	initPagination(index + 1);
-	setCookie("stacks_stack", "" + index, 10);
+	tools.setCookie("stacks_stack", "" + index, 10);
 }
 
 // Refresh content of the modal panel:
 function loadModalCards() {
 	var modalList = document.getElementById("modal-cards-list");
-	removeChildNodes(modalList);
+	tools.removeChildNodes(modalList);
 	for (var i = 0; i < currentCardsSet.length; i++) {
 		var li = document.createElement("li");
 		li.textContent = currentCardsSet[i];
@@ -201,7 +201,7 @@ function reset() {
 	displayCard();
 	displayRem();
 	var logList = document.getElementById("logList");
-	removeChildNodes(logList);
+	tools.removeChildNodes(logList);
 }
 
 function answerWrong() {
