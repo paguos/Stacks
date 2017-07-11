@@ -185,10 +185,16 @@ function getCoursesNames() {
 }
 
 //Writes an input in the log
-function log(input) {
+function log(input, tag = "") {
 	var logList = document.getElementById("logList");
 	var listItem = document.createElement("li");
-	listItem.innerHTML = input;
+	
+	var span = document.createElement("span");
+	span.className = tag;
+	span.textContent = tag.toUpperCase() + ": ";
+	
+	listItem.innerHTML = span.outerHTML + input;
+	console.log(listItem);
 	logList.appendChild(listItem);
 }
 
@@ -206,7 +212,7 @@ function reset() {
 
 function answerWrong() {
 	if (currentCardsSet.length > 0) {
-		log("WRONG: " + currentCardsSet[currentCardIndex]);
+		log(currentCardsSet[currentCardIndex], "WRONG");
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();
 		displayRem();
@@ -215,7 +221,7 @@ function answerWrong() {
 
 function answerRight() {
 	if (currentCardsSet.length > 0) {
-		log("RIGHT: " + currentCardsSet[currentCardIndex]);
+		log(currentCardsSet[currentCardIndex],"RIGHT");
 		currentCardsSet.splice(currentCardIndex, 1);
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();

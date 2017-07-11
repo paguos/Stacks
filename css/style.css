@@ -16,6 +16,7 @@ html, body {
 #logPanel {
     overflow: scroll;
     height: 250px;
+    font-family: Consolas, monaco, monospace;
     margin-top: 16px;
 }
 
@@ -28,4 +29,14 @@ html, body {
 
 #buttonsPanel > * {
     margin-top: 8px;
+}
+
+.RIGHT {
+    color : green;
+    font-weight: bold;
+}
+
+.WRONG{
+    color: red;
+    font-weight: bold;
 }
