@@ -41,7 +41,17 @@
                 <div class="col-sm-6">
                     <div class="container-fluid" id="cardsPanel">
                         <h2 id='card'></h2>
-                        <p id='rem'></p>
+                        <div class="container-fluid" id="progress_panel">
+                        <div class="row">
+                            <p id='rem'></p>
+                            <div class="progress">
+                                <div class="progress-bar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                    <span class="">50%</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
                     </div>
                     <div class="container-fluid" id="buttonsPanel">
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="reset()">Reset</a>

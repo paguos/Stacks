@@ -169,8 +169,8 @@ function displayCard() {
 
 // Updates remaning cards
 function displayRem() {
-	var p = document.querySelector("p");
-	p.textContent = "Remaining: " + currentCardsSet.length;
+	var div = document.querySelector("#rem");
+	div.textContent = "Remaining: " + currentCardsSet.length;
 }
 
 // Returns a list of all the curses names of the JSON file

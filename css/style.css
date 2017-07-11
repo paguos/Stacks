@@ -34,6 +34,10 @@ html, body {
     margin-top: 8px;
 }
 
+#rem {
+    display: inline-block;
+}
+
 .RIGHT {
     color : green;
     font-weight: bold;
