@@ -26,13 +26,13 @@ function init() {
 	var course_index = 0;
 	var course_cookie = tools.getCookie("stacks_course");
 	if (course_cookie !== "") {
-		index = parseInt(course_cookie);
+		course_index = parseInt(course_cookie);
 	}
+
 	var stack_index = 0;
 	var stack_cookie = tools.getCookie("stacks_stack");
 	if (stack_cookie !== "") {
 		stack_index = parseInt(stack_cookie);
-
 	}
 
 	selectByHash(course_index, stack_index);
