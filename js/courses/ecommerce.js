@@ -46,8 +46,6 @@ var ecomChap3 = ["Two and Three-Tier-Architectures",
 "Capacity Planning",
 "Baseline Measurements",
 "System Metrics and Load Balancing",
-"eBay example",
-"Vertical and Horizontal Attributes",
 "Scalability Factor",
 "Benefits of Load Balancing",
 "DNS-based Load Balancing",
@@ -62,8 +60,7 @@ var ecomChap3 = ["Two and Three-Tier-Architectures",
 "Demand-Side Economics of Scale",
 "Economics of Scale",
 "Virtualization Types",
-"Hypervisors",
-"Infrastructure as a Service (AWS)"];
+"Hypervisors"];
 
 var ecomChap4 = ["Features of the WWW",
 "Web 1.0, 2.0, 3.0",
