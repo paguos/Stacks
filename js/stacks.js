@@ -6,6 +6,8 @@ var currentCourseIndex = 0;
 var currentStackIndex = 0;
 var currentCardIndex = -1; 
 
+var currentStackLength = 0;
+
 function getCourse(index) {
 	return coursesJSON[index];
 }
@@ -115,9 +117,10 @@ function selectStack(index) {
 	currentCardsSet = getCards();
 	currentStackIndex = index;
 	currentCardIndex = chooseCardIndex(-1);
+	currentStackLength = currentCardsSet.length;
 	displayStack();
 	displayCard();
-	displayRem();
+	displayProgress();
 	reset();
 	loadModalCards();
 	initPagination(index + 1);
@@ -167,10 +170,27 @@ function displayCard() {
 	h2.textContent = currentCardsSet[currentCardIndex];
 }
 
-// Updates remaning cards
-function displayRem() {
+// Updates progress bar and rem display:
+function displayProgress() {
 	var div = document.querySelector("#rem");
 	div.textContent = "Remaining: " + currentCardsSet.length;
+
+	var progress_bar = document.querySelector("#progressbar");
+	var completion = tools.getPercent(currentCardsSet.length,currentStackLength);
+	var comp_span = progress_bar.firstChild;
+	
+	if(completion === 100){
+		progress_bar.className = "progress-bar-success";
+	}
+
+	comp_span.textContent = completion + "%";
+	progress_bar.style = "width : " + completion + "%";
+}
+
+// Resets values of the progress bar:
+function resetProgress(){
+	var progress_bar = document.querySelector("#progressbar");
+	progress_bar.className = "progress-bar";
 }
 
 // Returns a list of all the curses names of the JSON file
@@ -205,7 +225,8 @@ function reset() {
 	currentCardsSet = getCards();
 	currentCardIndex = chooseCardIndex(-1);
 	displayCard();
-	displayRem();
+	resetProgress();
+	displayProgress();
 	var logList = document.getElementById("logList");
 	tools.removeChildNodes(logList);
 }
@@ -215,7 +236,7 @@ function answerWrong() {
 		log(currentCardsSet[currentCardIndex], "WRONG");
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();
-		displayRem();
+		displayProgress();
 	}
 }
 
@@ -225,7 +246,7 @@ function answerRight() {
 		currentCardsSet.splice(currentCardIndex, 1);
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();
-		displayRem();
+		displayProgress();
 	}
 }
 
