@@ -38,10 +38,15 @@ var tools = (function () {
         return "";
     };
 
+    var getPercent = function(numb, total) {
+        return Math.round(numb / (toal * 100))/100;
+    }
+
     return {
         copyArray : copyArray,
         removeChildNodes : removeChildNodes,
         setCookie : setCookie,
-        getCookie : getCookie
+        getCookie : getCookie,
+        getPercent : getPercent
     }
 })();
