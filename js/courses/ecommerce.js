@@ -56,7 +56,6 @@ var ecomChap3 = ["Two and Three-Tier-Architectures",
 "Cloud Deployment Models",
 "Supply-Side Economics of Scale",
 "Demand-Side Economics of Scale",
-"Economics of Scale",
 "Virtualization Types",
 "Hypervisors"];
 
