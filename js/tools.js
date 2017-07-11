@@ -39,7 +39,7 @@ var tools = (function () {
     };
 
     var getPercent = function(numb, total) {
-        return Math.round(numb / (toal * 100))/100;
+        return Math.round(numb / (total * 100))/100;
     }
 
     return {
