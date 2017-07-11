@@ -75,7 +75,7 @@ function initPagination(page_nr = 1) {
 
 	$('#show_paginator').bootpag({
 		total: numberOfStacks,
-		maxVisible: 8,
+		maxVisible: 5,
 		page: page_nr
 
 	}).on('page', function (event, num) {
@@ -194,7 +194,6 @@ function log(input, tag = "") {
 	span.textContent = tag.toUpperCase() + ": ";
 	
 	listItem.innerHTML = span.outerHTML + input;
-	console.log(listItem);
 	logList.appendChild(listItem);
 }
 
