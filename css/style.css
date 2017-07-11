@@ -14,10 +14,13 @@ html, body {
 }
 
 #logPanel {
-    overflow: scroll;
-    height: 250px;
     font-family: Consolas, monaco, monospace;
     margin-top: 16px;
+}
+
+#logPanel ul{
+    max-height: 300px;
+    overflow: scroll;
 }
 
 #footer {
