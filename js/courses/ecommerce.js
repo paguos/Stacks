@@ -18,7 +18,6 @@ var ecomChap1 = ["Dimensions of Digital Value Chains",
 "Distributor Business Web"];
 
 var ecomChap2 = ["Business Model vs Plan vs Case",
-"Business Model Examples",
 "Business Model Canvas (Overview)",
 "Customer Segments",
 "Value Proposition",
