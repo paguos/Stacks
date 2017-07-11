@@ -194,7 +194,8 @@ function log(input, tag = "") {
 	span.textContent = tag.toUpperCase() + ": ";
 	
 	listItem.innerHTML = span.outerHTML + input;
-	logList.appendChild(listItem);
+	logList.insertBefore(listItem, logList.firstChild);
+	//logList.appendChild(listItem);
 }
 
 // ## STACK ACTIONS ##
