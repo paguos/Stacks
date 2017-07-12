@@ -20,10 +20,13 @@ html, body {
 #logPanel {
     font-family: Consolas, monaco, monospace;
     margin-top: 16px;
+    min-height: 100px;
+    margin-bottom: 16px;
 }
 
 #logPanel ul{
     max-height: 300px;
+    list-style: none;
     overflow: scroll;
 }
 
