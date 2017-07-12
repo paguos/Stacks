@@ -198,8 +198,11 @@ function displayProgress() {
 
 // Resets values of the progress bar:
 function resetProgress() {
+	
 	var progress_bar = document.querySelector("#progressbar");
 	progress_bar.className = "progress-bar";
+	
+	
 }
 
 // Returns a list of all the curses names of the JSON file
