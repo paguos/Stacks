@@ -4,7 +4,7 @@ var currentCourse = {};
 
 var currentCourseIndex = 0;
 var currentStackIndex = 0;
-var currentCardIndex = -1; 
+var currentCardIndex = -1;
 
 var currentStackLength = 0;
 
@@ -65,6 +65,15 @@ function addKeyListeners() {
 			answerWrong();
 		} else if (event.keyCode == "Z".charCodeAt(0)) {
 			reset();
+		} else if (event.keyCode == 39) {
+			//Next Stack:
+			if (currentStackIndex < currentCourse.stacks.length - 1)
+				selectStack(currentStackIndex + 1);
+
+		} else if (event.keyCode == 37) {
+			//Previous Stack:
+			if (currentStackIndex > 0)
+				selectStack(currentStackIndex - 1);
 		}
 	});
 }
@@ -176,10 +185,10 @@ function displayProgress() {
 	div.textContent = "Remaining: " + currentCardsSet.length;
 
 	var progress_bar = document.querySelector("#progressbar");
-	var completion = tools.getPercent(currentCardsSet.length,currentStackLength);
+	var completion = tools.getPercent(currentCardsSet.length, currentStackLength);
 	var comp_span = progress_bar.firstChild;
-	
-	if(completion === 100){
+
+	if (completion === 100) {
 		progress_bar.className = "progress-bar-success";
 	}
 
@@ -188,7 +197,7 @@ function displayProgress() {
 }
 
 // Resets values of the progress bar:
-function resetProgress(){
+function resetProgress() {
 	var progress_bar = document.querySelector("#progressbar");
 	progress_bar.className = "progress-bar";
 }
@@ -208,11 +217,11 @@ function getCoursesNames() {
 function log(input, tag = "") {
 	var logList = document.getElementById("logList");
 	var listItem = document.createElement("li");
-	
+
 	var span = document.createElement("span");
 	span.className = tag;
 	span.textContent = tag.toUpperCase() + ": ";
-	
+
 	listItem.innerHTML = span.outerHTML + input;
 	logList.insertBefore(listItem, logList.firstChild);
 	//logList.appendChild(listItem);
@@ -242,7 +251,7 @@ function answerWrong() {
 
 function answerRight() {
 	if (currentCardsSet.length > 0) {
-		log(currentCardsSet[currentCardIndex],"RIGHT");
+		log(currentCardsSet[currentCardIndex], "RIGHT");
 		currentCardsSet.splice(currentCardIndex, 1);
 		currentCardIndex = chooseCardIndex(currentCardIndex);
 		displayCard();
