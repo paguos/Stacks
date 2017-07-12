@@ -1,5 +1,9 @@
 h1 {
-    color: navy;
+    color: whitesmoke;
+}
+
+#stack_title {
+    color: lightslategrey;
 }
 
 #card {
@@ -20,37 +24,48 @@ html, body {
 #logPanel {
     font-family: Consolas, monaco, monospace;
     margin-top: 16px;
-    min-height: 100px;
-    margin-bottom: 16px;
+}
+
+#progressbar {
+    background: rgb(91, 192, 222);
+}
+
+@media only screen and (max-width:768px){
+    #logPanel ul{
+        height: 16px;
+        max-height:160px;
+    }
 }
 
 #logPanel ul{
-    max-height: 300px;
     list-style: none;
     overflow: scroll;
+    height: 160px;
 }
 
-#footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
+#wrap {
+    background: lightcoral;
+}
+
+#content {
+    background: whitesmoke;
+    border-radius: 25px;
 }
 
 #buttonsPanel > * {
     margin-top: 8px;
 }
 
-#rem {
-    display: inline-block;
+#show_paginator {
+    margin: 16px;
 }
 
 .RIGHT {
-    color : green;
+    color : rgb(92, 184, 92);
     font-weight: bold;
 }
 
 .WRONG{
-    color: red;
+    color : rgb(217, 83, 79);
     font-weight: bold;
 }

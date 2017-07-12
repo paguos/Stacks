@@ -5,7 +5,7 @@
     <title>Stacks</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/theme.min.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
     <script type="text/javascript" src="js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
@@ -33,25 +33,28 @@
         <div class="container">
             <div class="page-header">
                 <h1 id="coursetitle">Stacks</h1>
-                <h2 id="stacktitle">1. Premier League Clubs (Example)</h2>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="content">
+            <div class="page-header" id="stack_title">
+                <h2 id="stacktitle">1. Premier League Clubs (Example)</h2>
+            </div>
+            
             <div class="row">
                 <div class="col-sm-6">
                     <div class="container-fluid" id="cardsPanel">
                         <h2 id='card'></h2>
                         <div class="container-fluid" id="progress_panel">
-                        <div class="row">
-                            <p id='rem'></p>
-                            <div class="progress">
-                                <div class="progress-bar" id="progressbar" style="width:50%">
-                                    <span class=""></span>
+                            <div class="row">
+                                <p id='rem'></p>
+                                <div class="progress">
+                                    <div class="progress-bar-info" id="progressbar">
+                                        <span class=""></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                        
+
                     </div>
                     <div class="container-fluid" id="buttonsPanel">
                         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="reset()">Reset</a>
@@ -70,19 +73,19 @@
                         </fieldset>
                     </div>
                 </div>
+
+
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div id="show_paginator"></div>
+                </div>
             </div>
 
 
         </div>
 
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div style="width: 50%; margin: 0 auto;" id="show_paginator"></div>
-        </div>
-
-    </footer>
 
     <!-- Modal zur Erstellung eines neuen Blogartikels -->
     <div class="modal fade" id="showCardsModal" tabindex="-1" role="dialog" aria-labelledby="showCardsModalLabel">
