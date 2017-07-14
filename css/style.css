@@ -75,3 +75,11 @@ html, body {
     color : rgb(217, 83, 79);
     font-weight: bold;
 }
+
+#showCardsModalLabel {
+    color: lightslategrey;
+}
+
+#modal-cards-list {
+    list-style: square;
+}
