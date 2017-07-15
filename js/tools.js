@@ -38,15 +38,15 @@ var tools = (function () {
         return "";
     };
 
-    var getPercent = function(numb, total) {
-        return Math.round((((total - numb)/ total).toFixed(2) * 100));
+    var getPercent = function (numb, total) {
+        return Math.round((((total - numb) / total).toFixed(2) * 100));
     }
 
     return {
-        copyArray : copyArray,
-        removeChildNodes : removeChildNodes,
-        setCookie : setCookie,
-        getCookie : getCookie,
-        getPercent : getPercent
+        copyArray: copyArray,
+        removeChildNodes: removeChildNodes,
+        setCookie: setCookie,
+        getCookie: getCookie,
+        getPercent: getPercent
     }
 })();

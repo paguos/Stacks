@@ -134,6 +134,7 @@ function selectStack(index) {
 	loadModalCards();
 	initPagination(index + 1);
 	tools.setCookie("stacks_stack", "" + index, 10);
+	configurePDF();
 }
 
 // Refresh content of the modal panel:
@@ -198,11 +199,11 @@ function displayProgress() {
 
 // Resets values of the progress bar:
 function resetProgress() {
-	
+
 	var progress_bar = document.querySelector("#progressbar");
 	progress_bar.className = "progress-bar";
-	
-	
+
+
 }
 
 // Returns a list of all the curses names of the JSON file
@@ -260,6 +261,12 @@ function answerRight() {
 		displayCard();
 		displayProgress();
 	}
+}
+
+function configurePDF() {
+	var path = "courses/" + currentCourse.shortName + "/" + currentCourse.shortName + (currentStackIndex + 1) + ".pdf";
+	var btn = document.querySelector("#pdf-btn");
+	btn.setAttribute("href", path);
 }
 
 // Returns a random index for the next card
