@@ -139,27 +139,25 @@ var ecomChap7 = ["Basic Approach",
 "The Blockchain",
 "Mining & Consensus"];
 
-var ecomChap8 = ["Publishers and Advertisers",
-"Ad Agencias and Ad Networks",
-"Online Ad Exchanges",
-"Demand-side and Supplu-side Platforms",
-"Targeted Advertising - Overview",
+var ecomChap8 = ["Publishers & Advertisers",
+"Ad Agencies & Ad Networks",
+"Ad Network Categories",
+"Ad Network Workflow",
+"Online Ad Exchange",
+"Ad Exchange Workflow",
+"Demand/Supply-side Platform",
+"Targeted Advertising",
 "Targeting Categories",
 "Pricing Models",
-"Making HTTP Stateful",
-"Cookies - Motivation",
-"Cookies - Attributes",
+"Cookies Problem, Solutions and Definition",
 "Cookie Types",
 "Cookie - Lifecycle",
 "3rd Party Cookies",
 "Recommender Systems",
-"RS - Problem Statement",
+"RS - Approaches",
 "Conted-based Recommendations",
 "Collaborative Filtering",
-"Knowlage-based Recommendations",
-"Hyrbrid Approach",
-"Comparison of Recommender Aproach",
-"Content-based Recommendations"];
+"Knowlage-based Recommendations"];
 
 
 var ecomStacks = [];
