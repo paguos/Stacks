@@ -45,7 +45,6 @@ html, body {
 
 #log-scrollarea {
     height: 190px;
-    background: white;
     overflow-y: scroll;
 }
 
