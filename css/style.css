@@ -43,10 +43,16 @@ html, body {
     }
 }
 
+#log-scrollarea {
+    height: 190px;
+    background: white;
+    overflow-y: scroll;
+}
+
 #logPanel ul{
     list-style: none;
-    overflow: scroll;
-    height: 160px;
+    height : 101%;
+    margin-left : -5%;
 }
 
 #wrap {
