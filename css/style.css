@@ -37,7 +37,7 @@ html, body {
 }
 
 @media only screen and (max-width:768px){
-    #logPanel ul{
+    #log-scrollarea{
         height: 16px;
         max-height:160px;
     }
