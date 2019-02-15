@@ -27,37 +27,37 @@ var ec02 = [
 ];
 
 var ec03aws = [
-    "AWS Dynamo - eCommerce needs",
-    "AWS Dynamo - Data replication",
-    "AWS Dynamo - Conflict Resolution",
-    "AWS Dynamo - Techniques",
-    "AWS Dynamo - Dynamo System Interface - Consistent Hashing",
-    "AWS Dynamo - Data versioning - Vector Clocks",
-    "AWS Dynamo - Sloppy Quorum and hinted handoff",
-    "AWS Dynamo - Replica synchronization Merkle Trees",
-    "AWS Dynamo - Gossip-based protocol and failure detection"
+    "eCommerce needs",
+    "Data replication",
+    "Conflict Resolution",
+    "Techniques",
+    "Dynamo System Interface - Consistent Hashing",
+    "Data versioning - Vector Clocks",
+    "Sloppy Quorum and hinted handoff",
+    "Replica synchronization Merkle Trees",
+    "Gossip-based protocol and failure detection"
 ];
 
 var ec03gfs = [
     "Google Filesystem (GFS)",
-    "GFS - Requirements and assumptions",
-    "GFS - Interface",
-    "GFS - Architecture",
-    "GFS - Client/ GFS Interaction",
-    "GFS - Single master",
-    "GFS - Chunk Size",
-    "GFS - Metadata",
-    "GFS - Operation Log",
-    "GFS - Data Mutations",
-    "GFS - Consistency Model",
-    "GFS - Implications of Loose Data Consistency for Applications",
-    "GFS - Leases and Mutation Order",
-    "GFS - Atomic Records Append",
-    "GFS - Failure Handling During Updates",
-    "GFS - Non-Identical Replicas",
-    "GFS - Further Issues",
-    "GFS - Master Replication",
-    "GFS - Data Integrity"
+    "Requirements and assumptions",
+    "Interface",
+    "Architecture",
+    "Client/ GFS Interaction",
+    "Single master",
+    "Chunk Size",
+    "Metadata",
+    "Operation Log",
+    "Data Mutations",
+    "Consistency Model",
+    "Implications of Loose Data Consistency for Applications",
+    "Leases and Mutation Order",
+    "Atomic Records Append",
+    "Failure Handling During Updates",
+    "Non-Identical Replicas",
+    "Further Issues",
+    "Master Replication",
+    "Data Integrity"
 ];
 
 var ec04 = [
@@ -138,7 +138,7 @@ var ec07 = [
 var ecStacks = [];
 ecStacks.push({"title" : "ACID", "cards" : ec01});
 ecStacks.push({"title" : "BASE_1", "cards" : ec02});
-ecStacks.push({"title" : "BASE_2 - AWS", "cards" : ec03aws});
+ecStacks.push({"title" : "BASE_2 - AWS Dynamo", "cards" : ec03aws});
 ecStacks.push({"title" : "BASE_2 - GFS", "cards" : ec03gfs});
 ecStacks.push({"title" : "Benchmarking", "cards" : ec04});
 ecStacks.push({"title" : "SALT_1", "cards" : ec05});
