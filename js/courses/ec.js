@@ -21,12 +21,12 @@ var ec02 = [
     "Synchronous / Primary Copy",
     "Quorums",
     "Ideal and Practical scenarios",
-    "Properties",
-    "Eventual Consistency",
-    "Sharing"
+    "Base Properties",
+    "Reconciliation",
+    "Sharding"
 ];
 
-var ec03 = [
+var ec03aws = [
     "AWS Dynamo - eCommerce needs",
     "AWS Dynamo - Data replication",
     "AWS Dynamo - Conflict Resolution",
@@ -35,7 +35,10 @@ var ec03 = [
     "AWS Dynamo - Data versioning - Vector Clocks",
     "AWS Dynamo - Sloppy Quorum and hinted handoff",
     "AWS Dynamo - Replica synchronization Merkle Trees",
-    "AWS Dynamo - Gossip-based protocol and failure detection",
+    "AWS Dynamo - Gossip-based protocol and failure detection"
+];
+
+var ec03gfs = [
     "Google Filesystem (GFS)",
     "GFS - Requirements and assumptions",
     "GFS - Interface",
@@ -135,7 +138,8 @@ var ec07 = [
 var ecStacks = [];
 ecStacks.push({"title" : "ACID", "cards" : ec01});
 ecStacks.push({"title" : "BASE_1", "cards" : ec02});
-ecStacks.push({"title" : "BASE_2", "cards" : ec03});
+ecStacks.push({"title" : "BASE_2 - AWS", "cards" : ec03aws});
+ecStacks.push({"title" : "BASE_2 - GFS", "cards" : ec03gfs});
 ecStacks.push({"title" : "Benchmarking", "cards" : ec04});
 ecStacks.push({"title" : "SALT_1", "cards" : ec05});
 ecStacks.push({"title" : "SALT_2", "cards" : ec06});
