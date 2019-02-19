@@ -12,6 +12,8 @@ var ec01 = [
 
 var ec02 = [
     "Motivation",
+    "CAP Theorem",
+    "PACELC",
     "Replication",
     "Synchronous Replication",
     "Asynchronous Replication",
