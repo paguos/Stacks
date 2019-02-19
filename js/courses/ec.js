@@ -67,18 +67,13 @@ var ec04 = [
     "Key Questions",
     "Benchmarking vs Monitoring",
     "Building Block of Benchmarks",
-    "ACID TP Systems",
-    "ACID - Performance benchmarking",
     "ACID - TPC Benchmarks",
-    "Cloud benchmarking - Recommendations",
     "Cloud benchmarking - Generic IaaS benchmarking architecture",
     "Cloud benchmarking - Experiment Setup and Runtime",
     "Cloud benchmarking - Elastic Lab",
-    "BASE TP Systems",
-    "BASE - Consistency benchmarking",
-    "BASE - Security-Performance benchmarking",
-    "BASE - Cost tracking for cloud services"
+    "BASE - Benchmarks",
 ];
+
 var ec05 = [
     "What is blockchain?",
     "Key Properties",
