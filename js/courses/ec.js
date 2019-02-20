@@ -82,7 +82,7 @@ var ec05 = [
     "Decentralized database Perspective",
     "Programming Platform Perspective",
     "Shared ledger Perspective",
-    "Types of blockchains",
+    "Public vs Private",
     "The consensus problem",
     "Timing models",
     "Failure model",
