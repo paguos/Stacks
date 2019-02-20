@@ -78,14 +78,16 @@ var ec05 = [
     "What is blockchain?",
     "Key Properties",
     "Perspectives",
-    "Crypto Economy",
-    "Decentralized database",
-    "Programming Platform",
-    "Shared ledger",
+    "Crypto Economy Perspective",
+    "Decentralized database Perspective",
+    "Programming Platform Perspective",
+    "Shared ledger Perspective",
     "Types of blockchains",
-    "Consensus",
     "The consensus problem",
-    "Failures",
+    "Timing models",
+    "Failure model",
+    "Distributed Consensus",
+    "Synchronous/Byzantine Consensus",
     "BFT Solutions"
 ];
 
