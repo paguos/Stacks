@@ -92,22 +92,18 @@ var ec05 = [
 ];
 
 var ec06 = [
-    "Blockchain Systems",
-    "Centralized vs Decentralized",
+    "Motivation",
     "A peer-to-peer public ledger",
     "Structure of a block",
     "Solving Consensus",
-    "Proof of Work",
     "PoW - Mining Puzzle",
     "PoW - Security",
     "PoW - Incentives",
     "Blockchain Forks",
-    "Transaction Models",
     "Unspent Transaction Outputs (UTXO) Model",
     "Account Model",
     "Ethereum",
     "Ethereum - Smart Contracts",
-    "SALT",
     "SALT - ACID",
     "SALT - BASE"
 ];
