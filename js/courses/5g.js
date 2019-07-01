@@ -1,14 +1,14 @@
 var fiveG01 = [
-    "What are the main 5G use cases proposed by NGMN? What are the new business models in 5G?",
-    "What are the main values that 5G aims to create? What are the main requirements directions for 5G?",
-    "Name 3 design principles of 5G for radio, network or operations and management?",
-    "Which is the 5G high level architecture?",
-    "What does the EPC integrate with? Name 3 functions which are part of the rest of the operator functionality (beyond EPC)",
-    "Name some 5G key technological challenges from 5G PPP view. Name some 5G research directions",
-    "5G is a heterogeneous radio environment. Name some functionality needed to support it.",
-    "Which are the types of accesses which dock to the 5G convergent core network? What a re the convergent core network features?",
-    "What should be the functionality for edge networks, cognitive management systems, robustness and security, device connectivity, application support?",
-    "What should be done to integrate satellite networks or autonomous backhaul?"
+    "What is convergence? Give an educated exemple of convergence",
+    "What are the benefits of convergence?",
+    "What are the opportunities brought by convergence?",
+    "What are the main limitations of convergence?",
+    "Which services have already converged in a telecom network?",
+    "Which networks have alreayd converged in a telecommunication system?",
+    "What are the next networks supposed to converge?",
+    "Which are the main characteristics of a carrier grade network?",
+    "Which are characteristics of carrier-grade networks?",
+    "What does „4-nines“ mean?"
 ];
 
 var fiveG02 = [
