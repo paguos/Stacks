@@ -7,7 +7,7 @@ var edt01 = [
   "Positioning in the global economy",
   "Implications for standardization",
   "Implications for the development of ecosystems",
-  "Business om alliances ecosystems and networks",
+  "Business on alliances ecosystems and networks",
   "Suitable work environment",
 ];
 edtStacks.push({ title: "Implications of Digital Transformation", cards: edt01 });
@@ -15,10 +15,12 @@ edtStacks.push({ title: "Implications of Digital Transformation", cards: edt01 }
 var edt02 = [
   "Why Agile?",
   "Agile Methods",
-  "Scrum - 5 principles/core values",
+  "Scrum - 5 Principles",
+  "Scrum - 5 Core Values",
   "Scrum - 3 roles + 1",
   "Scrum - 3 artifacts",
   "Scrum - 4 events",
+  "Scrum - Cycle"
 ];
 edtStacks.push({ title: "Agile in the Digital Transformation", cards: edt02 });
 
@@ -28,7 +30,6 @@ var edt03 = [
   "Threads - Current Trends",
   "Threads - Definitions",
   "Risk and Risk Management",
-  "Risk Analysis Process",
   "Fraud Detection and Alarming",
   "Risk Assessment - Steps",
   "Risk Assessment - 1.) Define risk assessment methodology",
@@ -57,9 +58,12 @@ var edt05 = [
   "Different grades of Smartness",
   "Type of industrial applications",
   "Local/Edge Computing",
+  "Industrial IoT - CPS",
+  "Industrial IoT - CCPS",
+  "Industrial IoT - Synchronized Standardization",
   "Digital Twin and Asset Administration Shell",
-  "Standards pf connectivity for IoT",
   "W3C Wot 4 Key Components",
+  "Industrial IoT vs Consumer IoT"
 ];
 edtStacks.push({ title: "Industrial IoT", cards: edt05 });
 
